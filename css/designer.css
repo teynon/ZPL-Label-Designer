@@ -1,0 +1,101 @@
+.designerUtilityWindow {
+	position: absolute !important;
+	width: 220px;
+	border: 2px solid #AA0000;
+	border-radius: 4px;
+}
+
+.designerUtilityToolbar {
+	position: absolute !important;
+	width: 80px;
+	border: 2px solid #AA0000;
+	border-radius: 4px;
+}
+
+.designerUtilityLabelInspector {
+	height: 40px;
+	line-height: 36px;
+}
+
+.designerPropertyContainer {
+	height: 140px;
+	overflow: hidden;
+	background: #EEEEEE;
+	border-top: 1px solid #AA0000;
+	padding-bottom: 15px;
+}
+
+.designerPropertyContent {
+	height : 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	background: #FFFFFF;
+}
+
+.designerToolbarContent {
+	height: 300px;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	background: #FFFFFF;
+}
+
+.designerLabelContent {
+	padding: 2px;
+}
+
+.designerLabelControlElement {
+	
+}
+
+.designerLabelControlContainer {
+	float: left;
+	padding: 0px 4px 2px 4px;
+	margin: 0px 1px 0px 4px;
+	font-size: 12px;
+	border-radius: 5px;
+	background: #EEEEEE;
+	border: 1px solid #DDDDDD;
+	height: 33px;
+}
+
+.designerPropertyTitle {
+	background: #F0B7A1;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 5px;
+	height: 20px;
+	line-height: 20px;
+	/*cursor: move;*/
+}
+
+.designerToolbarButton {
+	background-size: 36px 36px; 
+	width: 36px;
+	height: 36px;
+	margin: 2px;
+	float: left;
+}
+
+.designerToolbarButtonActive div {
+	background: rgba(255, 255, 0, 0.15);
+	background-size: 36px 36px;
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
+}
+
+.designerToolbarBarcode {
+	background-image: url(../toolbar_barcode.gif);
+}
+
+.designerToolbarRectangle {
+	background-image: url(../toolbar_rectangle.gif);
+}
+
+.designerToolbarText {
+	background-image: url(../toolbar_text.gif);
+}
+
+.designerToolbarImage {
+	background-image: url(../toolbar_image.gif);
+}
