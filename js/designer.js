@@ -108,10 +108,10 @@ com.logicpartners.labelDesigner = function(canvasid, labelWidth, labelHeight) {
 		this.updateCanvas();
 	}
 
-	this.canvasElement.on("click", function() {
-		self.setActiveElement();
+	this.canvasElement.on("click", function(event) {
+		self.setActiveElement(event);
 	})
-			.on("mousedown", function() {
+			.on("mousedown", function(event) {
 				self.dragStartPosition = self.canvas.RelativeMouse(event);
 				self.dragLastPosition = self.dragStartPosition;
 				
@@ -127,7 +127,7 @@ com.logicpartners.labelDesigner = function(canvasid, labelWidth, labelHeight) {
 				else {
 					self.dragAction = 0;
 
-					self.setActiveElement();
+					self.setActiveElement(event);
 
 					if (self.activeElement) {
 						self.dragElementOffset = {
@@ -146,7 +146,7 @@ com.logicpartners.labelDesigner = function(canvasid, labelWidth, labelHeight) {
 			.on("mouseout", function() {
 				self.dragging = false;
 			})
-			.on("mousemove", function() {
+			.on("mousemove", function(event) {
 				if (self.dragging && self.activeElement) {
 					var coords = self.canvas.RelativeMouse(event);
 					//console.log(self.dragAction);
@@ -264,7 +264,7 @@ com.logicpartners.labelDesigner = function(canvasid, labelWidth, labelHeight) {
 		}
 	}
 
-	this.setActiveElement = function() {
+	this.setActiveElement = function(event) {
 		var coordinates = this.canvas.RelativeMouse(event);
 		if (!this.activeElement || this.getHandle(coordinates) == 0) {
 			this.activeElement = null;
@@ -478,7 +478,7 @@ com.logicpartners.labelDesigner = function(canvasid, labelWidth, labelHeight) {
 				   "^PR12\r\n" +
 				   "^LRY\r\n" +
 				   "^MD30\r\n" +
-				   "^PW" + this.labelWidth + "\r\n" +
+				   //"^PW" + this.labelWidth + "\r\n" +
 				   "^LL" + this.labelHeight + "\r\n" +
 				   "^PON\r\n";
 	    var bufferData = "";
