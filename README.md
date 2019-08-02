@@ -1,3 +1,5 @@
+There is more interest in this project than I originally suspected. I would love to hear about your use cases and suggestions for this project. Please email your thoughts to teynon1@gmail.com.
+
 # ZPL-Label-Designer
 Javascript / Web Based designer for ZPL printers.
 
